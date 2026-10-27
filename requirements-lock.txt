@@ -19,7 +19,7 @@ pillow==13.0.0
 pyarrow==21.0.0
 pycparser==3.12
 pyparsing==3.3.3
-pypdf==6.21.3
+pypdf==6.13.2
 python-dateutil==3.0.0
 pytz==2026.5
 referencing==0.37.0

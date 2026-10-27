@@ -32,7 +32,7 @@ The helper accepts only PDF URLs explicitly returned by official PMC metadata wi
 
 On 2026-10-27, metadata-only validation found an exact original-MD5 PDF for `10.3389/fimmu.2024.1358602` (PMC11165049, version 1, CC BY). DOI `10.1159/000525695` returned no unique PMC record and no PDF URL was fabricated. The validation did not download article full text.
 
-The historical PDF parser version is unrecorded; five PDFs (including one encrypted file) yielded 265 chunks with the tested versions, but rebuilt chunk text was not byte-identical to the archive (see the [validation receipt](../configs/paper_fulltext_validation.json)).
+The historical parser version is unrecorded; after a 24-version comparison, pinned `pypdf==6.13.2` reproduced all 66,244 archived chunks from 997 nonempty PDFs and the original empty-text skips for the remaining 3 of 1,000 inputs (see the [validation receipt](../configs/paper_fulltext_validation.json)).
 
 ## Manifest maintenance and native build
 

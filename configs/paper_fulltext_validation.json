@@ -88,232 +88,31 @@
     "unexpected_pdf_fail"
   ],
   "native_parser_sample": {
-    "historical_parser_version": "not recorded; no pypdf distribution was present in .dense_rag_deps",
-    "currently_locked_version": "6.21.3",
-    "scope": "Only the same five local PDFs were extracted; full 1000-PDF extraction was not run. No article text is stored in this receipt.",
-    "versions": [
-      {
-        "pypdf_version": "6.21.3",
-        "papers": 5,
-        "parents_equal": 5,
-        "chunks_generated": 265,
-        "chunks_archived": 265,
-        "papers_with_all_text_equal": 2,
-        "sample": [
-          {
-            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
-            "encrypted": false,
-            "chunks_generated": 19,
-            "chunks_archived": 19,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 13
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
-            "encrypted": false,
-            "chunks_generated": 37,
-            "chunks_archived": 37,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 23
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
-            "encrypted": true,
-            "chunks_generated": 21,
-            "chunks_archived": 21,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
-            "encrypted": false,
-            "chunks_generated": 42,
-            "chunks_archived": 42,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
-            "encrypted": false,
-            "chunks_generated": 146,
-            "chunks_archived": 146,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 146
-          }
-        ]
-      },
-      {
-        "pypdf_version": "6.10.2",
-        "papers": 5,
-        "parents_equal": 5,
-        "chunks_generated": 265,
-        "chunks_archived": 265,
-        "papers_with_all_text_equal": 2,
-        "sample": [
-          {
-            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
-            "encrypted": false,
-            "chunks_generated": 19,
-            "chunks_archived": 19,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
-            "encrypted": false,
-            "chunks_generated": 37,
-            "chunks_archived": 37,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 22
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
-            "encrypted": true,
-            "chunks_generated": 21,
-            "chunks_archived": 21,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 18
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
-            "encrypted": false,
-            "chunks_generated": 42,
-            "chunks_archived": 42,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
-            "encrypted": false,
-            "chunks_generated": 146,
-            "chunks_archived": 146,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 135
-          }
-        ]
-      },
-      {
-        "pypdf_version": "6.10.0",
-        "papers": 5,
-        "parents_equal": 5,
-        "chunks_generated": 265,
-        "chunks_archived": 265,
-        "papers_with_all_text_equal": 2,
-        "sample": [
-          {
-            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
-            "encrypted": false,
-            "chunks_generated": 19,
-            "chunks_archived": 19,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
-            "encrypted": false,
-            "chunks_generated": 37,
-            "chunks_archived": 37,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 22
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
-            "encrypted": true,
-            "chunks_generated": 21,
-            "chunks_archived": 21,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 18
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
-            "encrypted": false,
-            "chunks_generated": 42,
-            "chunks_archived": 42,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
-            "encrypted": false,
-            "chunks_generated": 146,
-            "chunks_archived": 146,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 135
-          }
-        ]
-      },
-      {
-        "pypdf_version": "5.9.0",
-        "papers": 5,
-        "parents_equal": 5,
-        "chunks_generated": 265,
-        "chunks_archived": 265,
-        "papers_with_all_text_equal": 3,
-        "sample": [
-          {
-            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
-            "encrypted": false,
-            "chunks_generated": 19,
-            "chunks_archived": 19,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
-            "encrypted": false,
-            "chunks_generated": 37,
-            "chunks_archived": 37,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 9
-          },
-          {
-            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
-            "encrypted": true,
-            "chunks_generated": 21,
-            "chunks_archived": 21,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": false,
-            "different_text_rows": 20
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
-            "encrypted": false,
-            "chunks_generated": 42,
-            "chunks_archived": 42,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          },
-          {
-            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
-            "encrypted": false,
-            "chunks_generated": 146,
-            "chunks_archived": 146,
-            "parent_text_equal": true,
-            "all_chunk_text_equal": true,
-            "different_text_rows": 0
-          }
-        ]
-      }
-    ],
-    "conclusion": "Historical parser version is unrecorded; five PDFs yielded 265 chunks with the tested versions, but rebuilt chunk text was not byte-identical to the archive.",
-    "parent_text_scope": "Parent text contains file metadata only; matching it is not evidence of matching extracted body text."
+    "historical_parser_version": "unrecorded; the compatible version was identified by archived-text comparison, not an installation log",
+    "currently_locked_version": "6.13.2",
+    "selection": "Only 6.13.2 matched all five initial PDFs among 24 tested latest-patch minor releases published by 2026-06-12; five additional PDFs also matched.",
+    "matrix_receipt": "configs/paper_fulltext_parser_matrix.json",
+    "official_wheel_url": "https://files.pythonhosted.org/packages/cb/17/378943705992f74e451a06de3401ce68e3213763c81e44d0614559c45599/pypdf-6.13.2-py3-none-any.whl",
+    "official_wheel_sha256": "6eeb9e57693f29d41bd01255d02660cbbb41fd7fc818a982677389a35e4f2083",
+    "official_upload_date": "2026-06-10T16:42:32.370389Z",
+    "sample_pdf_count": 10,
+    "sample_chunk_count": 588,
+    "all_sample_chunk_text_equal": true,
+    "includes_encrypted_pdf": true,
+    "chunk_size": 1400,
+    "chunk_overlap": 250,
+    "article_text_included": false
+  },
+  "native_full_corpus_validation": {
+    "receipt": "configs/paper_fulltext_native_validation.json",
+    "parser_version": "6.13.2",
+    "input_pdfs": 1000,
+    "archived_nonempty_pdfs": 997,
+    "empty_text_skipped_pdfs": 3,
+    "chunk_count": 66244,
+    "matching_chunk_count": 66244,
+    "all_inputs_verified": true,
+    "mismatch_pdf_count": 0,
+    "article_text_included": false
   }
 }

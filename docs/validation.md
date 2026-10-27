@@ -5,6 +5,7 @@ The package was checked in a fresh Python 3.11 environment on 2026-10-27, indepe
 | Check | Result |
 | --- | --- |
 | Benchmark reconstruction | All 571 records, field values, order, and output bytes match the released benchmark; SHA-256 `191ce330e81366cf893c327d3a7d69b30e74c769bd77e9f443f4155b73ccc405` |
+| Native PDF reconstruction | With the pinned `pypdf==6.13.2`, all 66,244 ordered chunk texts from 997 nonempty PDFs match their archived SHA-256 values; the other three of 1,000 input PDFs reproduce the original empty-text skip |
 | Supporting-source reconstruction | DisGeNET: 1,958 nodes / 2,452 edges; cell-line annotation: 182 nodes / 176 edges. Complete content matches the original source graphs apart from timestamps |
 | Full-scale Evidence Graph construction | 295,063 nodes / 1,771,770 edges; node types, relation counts, relation-family counts and observation-source counts match the original build |
 | Three retrieval views | All six reconstructed document/edge files match the paper snapshot byte-for-byte by SHA-256. Document Corpus: 18,251 units; Semantic KG: 51,980 units / 223,418 edges; Evidence Graph: 351,783 units |
