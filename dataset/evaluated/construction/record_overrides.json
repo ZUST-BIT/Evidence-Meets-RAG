@@ -1,0 +1,17 @@
+{
+  "description": "Explicit annotations retained from the frozen paper benchmark. The current raw-source reconstruction exposes an additional IntOGen support layer for this one chain; preserve the original construction-time support-layer list and corresponding evidence wording. No question, answer, entity, or scoring contract is overridden.",
+  "reference_sha256": "191ce330e81366cf893c327d3a7d69b30e74c769bd77e9f443f4155b73ccc405",
+  "records": [
+    {
+      "id": "mechanism-trace-intermediate-external-causal-chain-glioma-TGFBR1-ACVR1-SMAD1",
+      "fields": {
+        "metadata.external_support_layers": [
+          "open_targets_cgc",
+          "open_targets_intogen",
+          "open_targets_overall"
+        ],
+        "evidence_text": "Indirect external mechanism chain for GLIOMA: TGFBR1 --up-regulates activity--> ACVR1 (mechanism=phosphorylation; direct=t; pmid=29376829) ; ACVR1 --up-regulates activity--> SMAD1 (mechanism=phosphorylation; direct=t; pmid=9748228). Shared pathway classes=tgfb_emt; external support layers=open_targets_cgc, open_targets_intogen, open_targets_overall."
+      }
+    }
+  ]
+}

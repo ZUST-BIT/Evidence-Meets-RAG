@@ -1,0 +1,128 @@
+[
+  {
+    "framework": "Vanilla RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__naive_rag",
+    "label_b": "raw_observation_view__naive_rag",
+    "result_a": "dataset/rag/results/fixed_context_component_ablation_571_vanilla__full.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__naive_rag__formalv3_571_classic4_raw_vs_graph.jsonl"
+  },
+  {
+    "framework": "Vanilla RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__naive_rag",
+    "label_b": "semantic_kg__naive_rag",
+    "result_a": "dataset/rag/results/fixed_context_component_ablation_571_vanilla__full.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__naive_rag__formalv3_571_classic4_semantic_kg.jsonl"
+  },
+  {
+    "framework": "Dense RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__dense_rag",
+    "label_b": "raw_observation_view__dense_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__dense_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__dense_rag__formalv3_571_classic4_raw_vs_graph.jsonl"
+  },
+  {
+    "framework": "Dense RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__dense_rag",
+    "label_b": "semantic_kg__dense_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__dense_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__dense_rag__formalv3_571_classic4_semantic_kg.jsonl"
+  },
+  {
+    "framework": "Hybrid RAG (ours)",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__hybrid_rag",
+    "label_b": "raw_observation_view__hybrid_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__hybrid_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__hybrid_rag__formalv3_571_classic4_raw_vs_graph.jsonl"
+  },
+  {
+    "framework": "Hybrid RAG (ours)",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__hybrid_rag",
+    "label_b": "semantic_kg__hybrid_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__hybrid_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__hybrid_rag__formalv3_571_classic4_semantic_kg.jsonl"
+  },
+  {
+    "framework": "Graph RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__graph_rag",
+    "label_b": "raw_observation_view__graph_rag",
+    "result_a": "dataset/rag/results/unified_571/stage/R1C1G1.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__graph_rag__formalv3_571_classic4_raw_vs_graph.jsonl"
+  },
+  {
+    "framework": "Graph RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__graph_rag",
+    "label_b": "semantic_kg__graph_rag",
+    "result_a": "dataset/rag/results/unified_571/stage/R1C1G1.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__graph_rag__formalv3_571_classic4_semantic_kg.jsonl"
+  },
+  {
+    "framework": "CRAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__crag_rag",
+    "label_b": "raw_observation_view__crag_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__crag_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__crag_rag__formalv3_571_classic4_raw_vs_graph.jsonl"
+  },
+  {
+    "framework": "CRAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__crag_rag",
+    "label_b": "semantic_kg__crag_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__crag_rag__formalv3_571_classic4_raw_vs_graph.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__crag_rag__formalv3_571_classic4_semantic_kg.jsonl"
+  },
+  {
+    "framework": "RAPTOR",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__raptor_rag",
+    "label_b": "raw_observation_view__raptor_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__raptor_rag__formalv3_571_cross_raptor_kg2rag.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__raptor_rag__formalv3_571_cross_raptor_kg2rag.jsonl"
+  },
+  {
+    "framework": "RAPTOR",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__raptor_rag",
+    "label_b": "semantic_kg__raptor_rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__raptor_rag__formalv3_571_cross_raptor_kg2rag.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__raptor_rag__formalv3_571_cross_raptor_kg2rag.jsonl"
+  },
+  {
+    "framework": "KG2RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Doc Corpus",
+    "label_a": "evidence_graph_complete__kg2rag",
+    "label_b": "raw_observation_view__kg2rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__kg2rag__formalv3_571_cross_raptor_kg2rag.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__raw_observation_view__kg2rag__formalv3_571_cross_raptor_kg2rag.jsonl"
+  },
+  {
+    "framework": "KG2RAG",
+    "knowledge_form_a": "Evidence KG",
+    "knowledge_form_b": "Semantic KG",
+    "label_a": "evidence_graph_complete__kg2rag",
+    "label_b": "semantic_kg__kg2rag",
+    "result_a": "dataset/rag/results/multi_cancer__evidence_graph_complete__kg2rag__formalv3_571_cross_raptor_kg2rag.jsonl",
+    "result_b": "dataset/rag/results/multi_cancer__semantic_kg__kg2rag__formalv3_571_cross_raptor_kg2rag.jsonl"
+  }
+]

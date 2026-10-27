@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "target": "dataset/raw/civic/evidence_items.jsonl",
+      "snapshot": "data_sources/benchmark/civic/evidence_items.jsonl.gz",
+      "bytes": 13723085,
+      "sha256": "fcaa2590a981fc2725b9fd99dab0b1db5dbda2746369eb295628a5f20ee8c20e",
+      "snapshot_bytes": 2083300,
+      "snapshot_sha256": "47938ea001255d1da17007fbf34e2f334b92eb16c4a0cfdc5592b071e2e91102",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/civic/assertions.jsonl",
+      "snapshot": "data_sources/benchmark/civic/assertions.jsonl.gz",
+      "bytes": 265186,
+      "sha256": "8eda1134f9bedb3c836540f84d80e3e1268320095808fcfc426b868097b3522f",
+      "snapshot_bytes": 59688,
+      "snapshot_sha256": "8b3f9870027bbca922b177e5b3ad3fbd98990d4d1c76e5870d17eb304b1596e0",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/signor/signor_latest.tsv",
+      "snapshot": "data_sources/benchmark/signor/signor_latest.tsv.gz",
+      "bytes": 20313419,
+      "sha256": "3ebe96c2d19f2cf7cf92614844366346436c82d79dde67c8d7a5ddfda0a6bd4c",
+      "snapshot_bytes": 6526396,
+      "snapshot_sha256": "867bfc2e068018435e83a6c72758382c71f4fefecf55cd97e2517df62d770376",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/clinvar/clinvar_somatic_cancer_submission_subset.jsonl",
+      "snapshot": "data_sources/benchmark/clinvar/clinvar_somatic_cancer_submission_subset.jsonl.gz",
+      "bytes": 333388,
+      "sha256": "cd3f824fcc758e532c359119be48d705bc907b5bd8e243a8d46a61f2dd84a1d4",
+      "snapshot_bytes": 19707,
+      "snapshot_sha256": "4c1a15f830ace16b43ceb8ada68480aab05b17519d7e35e293c6f4582465faa8",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/intogen/IntOGen-Drivers-20200201.zip",
+      "snapshot": "data_sources/benchmark/intogen/IntOGen-Drivers-20200201.zip.gz",
+      "bytes": 281787,
+      "sha256": "a390799f9168dfea95feded1d9f0f91a7d3fae5e99857e4e8a6d2434b90aab28",
+      "snapshot_bytes": 281454,
+      "snapshot_sha256": "25e88ca0b8ed2b58517a87a2afa7355351dd9b7e323b68d2f36dd6062091f8ae",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/intogen/IntOGen-Cohorts-20200201.zip",
+      "snapshot": "data_sources/benchmark/intogen/IntOGen-Cohorts-20200201.zip.gz",
+      "bytes": 12825,
+      "sha256": "858c0e227697a88780476690a1cc85b1b7c1894e3ee2c2b7a5ccf6cbe5ddc615",
+      "snapshot_bytes": 12332,
+      "snapshot_sha256": "39867f2349667750e94fa5a49cc7fd9f128602aaf76fe627fb8cfba1152fd22b",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/bioasq/test/12B1_golden.json",
+      "snapshot": "data_sources/benchmark/bioasq/test/12B1_golden.json.gz",
+      "bytes": 1343627,
+      "sha256": "28bf1467232924494c515368f8d5d72057d43ef37df1ef216baff4c765a382f2",
+      "snapshot_bytes": 231452,
+      "snapshot_sha256": "e5c63377c2b07584b3c8123bbab575c361c33a11043cd9081fc4bc96f8c1d1b1",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/bioasq/test/12B2_golden.json",
+      "snapshot": "data_sources/benchmark/bioasq/test/12B2_golden.json.gz",
+      "bytes": 1639002,
+      "sha256": "8774b96e8a14bad9e4a8513b92579d76abaccfe6665843241c9896d9d7ebe837",
+      "snapshot_bytes": 277883,
+      "snapshot_sha256": "e856d54e80c8e8d17f89546a2d12e7de2ffeef59c280a729228cd5aa58487bfc",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/bioasq/test/12B3_golden.json",
+      "snapshot": "data_sources/benchmark/bioasq/test/12B3_golden.json.gz",
+      "bytes": 2058637,
+      "sha256": "f0346b80eb3b468707dbc0f34a387000545e01350ac1f21ea8b2e809d4346337",
+      "snapshot_bytes": 323139,
+      "snapshot_sha256": "2a7d82f70e50967d5586170f5ae2e44c062f041cf4e97c7a2e0384603d364ae2",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/bioasq/test/12B4_golden.json",
+      "snapshot": "data_sources/benchmark/bioasq/test/12B4_golden.json.gz",
+      "bytes": 2004430,
+      "sha256": "f39a1307ee743b25aac4ed1f46014f49ca99b72c9418dc37fc29bf329402bc11",
+      "snapshot_bytes": 367313,
+      "snapshot_sha256": "491a584f6eecc3d9f2381b98c7759e5da590f16815ea2a5f73a93de259d77bcc",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/opentargets/disease.parquet",
+      "snapshot": "data_sources/benchmark/opentargets/disease.parquet.gz",
+      "bytes": 7259049,
+      "sha256": "ea7a17ce4eacf552553740ec47f282e27d818155f8576cb8e7a624879adea617",
+      "snapshot_bytes": 6145842,
+      "snapshot_sha256": "fd9b31300e7ce87c3cecc14b4159d9a221508523249cffd28a69aa70dbda34c7",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/opentargets/association_overall_direct_supported.parquet",
+      "snapshot": "data_sources/benchmark/opentargets/association_overall_direct_supported.parquet.gz",
+      "bytes": 220388,
+      "sha256": "c4129eb2126af832b57dc113edb7391415d10a65b481e4ffb9682c8c0d860bd1",
+      "snapshot_bytes": 187150,
+      "snapshot_sha256": "706d54c9f207e923c7aabb06f4de95deb66b6c98318b074933fb4f318acdcde3",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/opentargets/association_by_datasource_direct_supported.parquet",
+      "snapshot": "data_sources/benchmark/opentargets/association_by_datasource_direct_supported.parquet.gz",
+      "bytes": 42044,
+      "sha256": "9b043a1815170b8a95036bac1b18cce7c20def8c55e0c73ca17719f6e748fc2e",
+      "snapshot_bytes": 29213,
+      "snapshot_sha256": "96d29b9b827c41d45f51080fd79a95616b023825bb86b89dbe605d35f66555f9",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/opentargets/target_supported.parquet",
+      "snapshot": "data_sources/benchmark/opentargets/target_supported.parquet.gz",
+      "bytes": 3387592,
+      "sha256": "7644eb6cd3dcac4d18bc7f879f6e02fa0f7684fa0dc6cefcd5eb8bb61e2f516e",
+      "snapshot_bytes": 2891378,
+      "snapshot_sha256": "cef80e300086e03858eb3eed37b6b3f521919c346a67a9183f7aef1b299340d0",
+      "compression": "gzip"
+    },
+    {
+      "target": "dataset/raw/pathwaycommons/pc-hgnc.gmt.gz",
+      "url": "https://download.baderlab.org/PathwayCommons/PC2/v14/pc-hgnc.gmt.gz",
+      "bytes": 262513,
+      "sha256": "752c61040a4d82b97efe9c8fe412aad45e4a61b221442c3a34c0f2b70929872f",
+      "license_note": "Pathway Commons v14 distributes content under source-database terms. Obtain from the original endpoint; the aggregate GMT is not relicensed or bundled here."
+    }
+  ],
+  "notice": "Snapshots are construction inputs, not model predictions. Upstream data terms apply separately; see docs/data.md and NOTICE.md."
+}

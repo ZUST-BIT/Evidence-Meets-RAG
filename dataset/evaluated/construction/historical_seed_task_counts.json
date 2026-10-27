@@ -1,0 +1,15 @@
+{
+  "cancer_cell_line_annotation": 17,
+  "cgc_support_strength": 46,
+  "cross_source_corroboration_status": 23,
+  "cross_source_support_bundle": 81,
+  "driver_role_assignment": 90,
+  "intogen_support_strength": 40,
+  "mechanism_bioasq_factoid": 3,
+  "mechanism_bioasq_list": 3,
+  "mechanism_trace_intermediate_gene": 23,
+  "pathway_class_membership": 70,
+  "precision_oncology_assertion": 6,
+  "precision_oncology_evidence": 27,
+  "target_disease_association_strength": 70
+}

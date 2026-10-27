@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "doi": "10.6084/m9.figshare.31888399.v10",
+  "version": 10,
+  "public_api": "https://api.figshare.com/v2/articles/31888399",
+  "license": {
+    "value": 3,
+    "name": "MIT",
+    "url": "https://opensource.org/licenses/MIT"
+  },
+  "entries": [
+    {
+      "target": "kg/pubmed-evidence-kg/hcc/evidence_graph.json",
+      "url": "https://ndownloader.figshare.com/files/64670229",
+      "file_id": 64670229,
+      "public_name": "evidence_graph_hcc.json",
+      "bytes": 27687460,
+      "sha256": "3b12d7f51a67d4acf9b05974bb93587707e9c4d01bd186f095be422320bc22d9",
+      "md5": "671ce8ee79323a060c731d10d9a53cb7"
+    },
+    {
+      "target": "kg/pubmed-evidence-kg/hcc/evidence_nodes.json",
+      "url": "https://ndownloader.figshare.com/files/64670247",
+      "file_id": 64670247,
+      "public_name": "evidence_records_hcc.json",
+      "bytes": 47420159,
+      "sha256": "66cc6ba180cc706c41d31cc988adc63acc4631595ac1b8ee73279b886fa866eb",
+      "md5": "5bb9721c180f6505dae97676e45d07d8"
+    },
+    {
+      "target": "kg/pubmed-evidence-kg/crc/evidence_graph.json",
+      "url": "https://ndownloader.figshare.com/files/64670223",
+      "file_id": 64670223,
+      "public_name": "evidence_graph_crc.json",
+      "bytes": 23507508,
+      "sha256": "3b90fb99a5e131af6f9546348fca87885cbae9740d56c249e94a018df52832e7",
+      "md5": "079244b87364af45a34cd7b6184f6932"
+    },
+    {
+      "target": "kg/pubmed-evidence-kg/crc/evidence_nodes.json",
+      "url": "https://ndownloader.figshare.com/files/64670241",
+      "file_id": 64670241,
+      "public_name": "evidence_records_crc.json",
+      "bytes": 41081656,
+      "sha256": "6c61ee999324448309f6ee1ae8d6671e1aaf6b7b56dcaa5508d572a2bef6b234",
+      "md5": "1f7f29d21a8d67dd2da573f66833f27d"
+    }
+  ],
+  "local_correspondence": "All four project inputs match the public file bytes by MD5; records are restored as evidence_nodes.json, graphs as evidence_graph.json.",
+  "counts": {
+    "hcc": {
+      "records": 7872,
+      "nodes": 10328,
+      "edges": 49756
+    },
+    "crc": {
+      "records": 6622,
+      "nodes": 8795,
+      "edges": 39361
+    }
+  }
+}

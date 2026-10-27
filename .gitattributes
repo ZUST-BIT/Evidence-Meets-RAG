@@ -1,0 +1,6 @@
+# Preserve checksum-pinned data and original reviewer CSV line endings.
+*.jsonl -text
+*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.gz -text
+*.pdf -text
+*.pptx -text

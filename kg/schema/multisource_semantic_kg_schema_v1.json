@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kg/schema/multisource_semantic_kg_schema_v1.json",
+  "title": "Same-source relation-centric Semantic KG schema",
+  "description": "Simplified traditional KG schema projected from the multi-source evidence graph. It keeps only canonical entity nodes and aggregated semantic relations, without evidence or observation nodes.",
+  "type": "object",
+  "required": ["schema_version", "graph_metadata", "nodes", "edges"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "graph_metadata": {
+      "type": "object",
+      "required": ["graph_id", "graph_name", "created_by", "created_from", "source_families", "disease_scope", "entity_types", "relation_types"],
+      "properties": {
+        "graph_id": { "type": "string" },
+        "graph_name": { "type": "string" },
+        "created_by": { "type": "string" },
+        "created_from": { "type": "string" },
+        "source_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "disease_scope": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "entity_types": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/entityType" }
+        },
+        "relation_types": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/relationType" }
+        },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/node" }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    }
+  },
+  "$defs": {
+    "entityType": {
+      "type": "string",
+      "enum": ["Gene", "Disease", "Drug", "Phenotype", "Pathway", "Cohort", "MolecularFeature"]
+    },
+    "relationType": {
+      "type": "string",
+      "enum": [
+        "UPREGULATED_IN",
+        "DOWNREGULATED_IN",
+        "ALTERED_IN",
+        "ASSOCIATED_WITH_POOR_OUTCOME",
+        "ASSOCIATED_WITH_FAVORABLE_OUTCOME",
+        "DEPENDENCY_IN",
+        "SENSITIVE_TO",
+        "PROMOTES",
+        "SUPPRESSES",
+        "CODEPENDENT_WITH",
+        "PARTICIPATES_IN",
+        "HAS_FEATURE",
+        "FEATURE_TARGETS",
+        "OBSERVED_IN",
+        "HAS_COHORT"
+      ]
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "node_type", "canonical_name"],
+      "properties": {
+        "id": { "type": "string" },
+        "node_type": { "$ref": "#/$defs/entityType" },
+        "canonical_name": { "type": "string" },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "disease_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "edge": {
+      "type": "object",
+      "required": ["source", "target", "relation_type", "relation_group", "support_count", "confidence_score", "source_families", "disease_families", "predicate_counts", "statement_text"],
+      "properties": {
+        "source": { "type": "string" },
+        "target": { "type": "string" },
+        "relation_type": { "$ref": "#/$defs/relationType" },
+        "relation_group": { "type": "string" },
+        "support_count": { "type": "integer" },
+        "confidence_score": { "type": "number" },
+        "source_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "disease_families": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "predicate_counts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        },
+        "supporting_evidence_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "supporting_statement_examples": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "statement_text": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

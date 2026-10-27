@@ -1,0 +1,148 @@
+{
+  "purpose": "Source-copy provenance; original files were not edited. Changes adapt portable paths, source selection and published IDs, restore publication equal-score tie priorities, and hoist an equivalent audit set construction without changing scoring formulas or limits.",
+  "copied_modules": [
+    {
+      "source": "scripts/extract_tcga_atomic_evidence.py",
+      "destination": "scripts/extract_tcga_atomic_evidence.py",
+      "source_sha256": "6fe7f674d411ac1c141d6cbfd6c22eca0ec2ec9d743c3544b84d591caeea2a91",
+      "destination_sha256": "37d04e3a0e6ecdabfbc835f7aaa8a6ef8d400f7cd373a8924ccc088956ba7cc9",
+      "modified_functions": [
+        "relpath"
+      ]
+    },
+    {
+      "source": "scripts/extract_tcga_atomic_evidence_v2.py",
+      "destination": "scripts/extract_tcga_atomic_evidence_v2.py",
+      "source_sha256": "9f665cf78541b6c776b6a37dd00a3f463c445aff8a4da558636a465336bfd685",
+      "destination_sha256": "9f665cf78541b6c776b6a37dd00a3f463c445aff8a4da558636a465336bfd685",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/extract_depmap_dependency_evidence.py",
+      "destination": "scripts/extract_depmap_dependency_evidence.py",
+      "source_sha256": "50d722b1f7a704ab9910e3b0e15273382482a9c4850ea66830a79c9de41315e5",
+      "destination_sha256": "033d44c9b25b543bd4d173e68bc21cc3690de7af7a4d0fabd00b600921cedfbd",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/align_pubmed_to_unified_schema.py",
+      "destination": "scripts/align_pubmed_to_unified_schema.py",
+      "source_sha256": "352666534a78837bb2a9f82dcd3da9e8436753c964717514c48038b620fe3196",
+      "destination_sha256": "9fe96cffb7496674fcf8d2edf34f6d167ad8761839e76f4d9fdaefa54049d8d1",
+      "modified_functions": [
+        "relpath"
+      ]
+    },
+    {
+      "source": "scripts/build_entity_normalization_layer.py",
+      "destination": "scripts/build_entity_normalization_layer.py",
+      "source_sha256": "fcfb3d0558905280a32ff96b9f720172f02b7608abdcf8bfe6c56910cc5adab1",
+      "destination_sha256": "fb04cac812bd03f5f5d2099f315dfc3166255fd50bd43acd1665a98d74379cab",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/build_multisource_integrated_evidence_graph.py",
+      "destination": "scripts/build_multisource_integrated_evidence_graph.py",
+      "source_sha256": "89bc680889b4ed0747ef3568ba18cfa2c635201b8cc8a2dedc28092f92315f38",
+      "destination_sha256": "89bc680889b4ed0747ef3568ba18cfa2c635201b8cc8a2dedc28092f92315f38",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/build_raw_multisource_corpus.py",
+      "destination": "scripts/build_raw_multisource_corpus.py",
+      "source_sha256": "a04b5cbbe5ae631ed6da01116241deac00d49857667113a5e64b01319e5fa40e",
+      "destination_sha256": "776be66ac3b72f372f08c09352666033215d898d4be84f2603f75fd1939bc9d5",
+      "modified_functions": [
+        "build_depmap_corpus",
+        "main",
+        "match_pdf_meta",
+        "relpath"
+      ]
+    },
+    {
+      "source": "scripts/build_multisource_complete_graph.py",
+      "destination": "scripts/build_multisource_complete_graph.py",
+      "source_sha256": "a3317f8e229407fe0a85a14cf8c16e536b60770aeb3649c31c78c8e25a875f01",
+      "destination_sha256": "325513b15d34d4c2b5e432ac5257805a8387f076fa18992e5bc19054c593f9e5",
+      "modified_functions": [
+        "build_audit",
+        "select_observations_for_evidence",
+        "build_observation_lineage_edges",
+        "load_lineage_preferences"
+      ],
+      "equivalence_note": "Hoist the existing observation-anchor source-ID set out of the unlinked-observation comprehension. It is the same set for every observation; graph construction and resulting values are unchanged.",
+      "selection_note": "Original candidate scoring, eligibility window and per-family limits are unchanged. Published observation-ID list order resolves equal scores among currently valid candidates only; unlisted candidates use observation ID order."
+    },
+    {
+      "source": "scripts/build_multisource_semantic_kg.py",
+      "destination": "scripts/build_multisource_semantic_kg.py",
+      "source_sha256": "039691d305c3d3fc935200891d1af2f4d1e1d54452cc2fee864c0fee933b70e0",
+      "destination_sha256": "039691d305c3d3fc935200891d1af2f4d1e1d54452cc2fee864c0fee933b70e0",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/prepare_rag_knowledge_sources.py",
+      "destination": "scripts/prepare_rag_knowledge_sources.py",
+      "source_sha256": "a6c1ba95315b572e64281069a4bc3cb8920e93b3db59010806a51bad3d79afe7",
+      "destination_sha256": "45813e7525eb57929e9fda996dd8253dcc3c6ae55407e768e7588a5952788f07",
+      "modified_functions": [
+        "build_fulltext_source",
+        "main"
+      ]
+    },
+    {
+      "source": "scripts/build_source_overlap_selection.py",
+      "destination": "scripts/build_source_overlap_selection.py",
+      "source_sha256": "dff7870041bfa916bba3c389cb981968d3577c663f3ac135e66fd80335d298d1",
+      "destination_sha256": "f301d999269f327f1d819f45998c7661ce1384683deecfd7537ce5c0c1930e17",
+      "modified_functions": [
+        "load_pubmed_summary"
+      ]
+    },
+    {
+      "source": "scripts/build_tcga_depmap_evidence_relations.py",
+      "destination": "scripts/build_tcga_depmap_evidence_relations.py",
+      "source_sha256": "056942dd827fa2a3c9348b0955ca232432b598616af13e03bd1d9ab02e0c17ea",
+      "destination_sha256": "056942dd827fa2a3c9348b0955ca232432b598616af13e03bd1d9ab02e0c17ea",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/build_supporting_alignment_graphs.py",
+      "destination": "scripts/build_supporting_alignment_graphs.py",
+      "source_sha256": "33ca6a18a14bda68b4be9fbcb58d0a70f68bb07fcfac2b386a8bd664c38ab231",
+      "destination_sha256": "d9ec27b81264eb7a2d34299b00a3b71f90a0e13664f63b8e0b5b774a920022c4",
+      "modified_functions": [
+        "main"
+      ]
+    },
+    {
+      "source": "scripts/build_multisource_controlled_sources.py",
+      "destination": "scripts/build_multisource_controlled_sources.py",
+      "source_sha256": "e34ccf96f60e55c7d7147132d8094559d73daa7636416437535af74f5fa2187d",
+      "destination_sha256": "e34ccf96f60e55c7d7147132d8094559d73daa7636416437535af74f5fa2187d",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/build_single_source_knowledge_forms.py",
+      "destination": "scripts/build_single_source_knowledge_forms.py",
+      "source_sha256": "6a520a2029c865812fca51547e1a5d5da64b521f63635c2ba0f4e83311564e3e",
+      "destination_sha256": "6a520a2029c865812fca51547e1a5d5da64b521f63635c2ba0f4e83311564e3e",
+      "modified_functions": []
+    },
+    {
+      "source": "scripts/build_tcga_pubmed_complementarity.py",
+      "destination": "scripts/build_tcga_pubmed_complementarity.py",
+      "source_sha256": "96ca7b7ddbdba2f80cc1a5719b30fb4f0c6f49ebd3f71849f965724583dfe264",
+      "destination_sha256": "96ca7b7ddbdba2f80cc1a5719b30fb4f0c6f49ebd3f71849f965724583dfe264",
+      "modified_functions": []
+    }
+  ],
+  "new_modules": [
+    "scripts/knowledge_build_paths.py",
+    "scripts/paper_raw_ids.py",
+    "scripts/build_knowledge_pipeline.py",
+    "scripts/smoke_knowledge_pipeline.py",
+    "scripts/paper_fulltext_sources.py",
+    "scripts/fetch_paper_fulltexts.py"
+  ]
+}

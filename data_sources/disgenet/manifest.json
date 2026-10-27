@@ -1,0 +1,39 @@
+{
+  "source": "DisGeNET curated subset distributed by Therapeutics Data Commons",
+  "url": "https://dataverse.harvard.edu/api/access/datafile/4168282",
+  "license": "CC BY-NC-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "official_task_page": "https://tdcommons.ai/multi_pred_tasks/gdi/",
+  "official_mapping_source": "https://github.com/mims-harvard/TDC/blob/main/tdc/metadata.py",
+  "official_mapping": {
+    "name2id.disgenet": 4168282,
+    "name2stats.disgenet": 52476
+  },
+  "raw_file": {
+    "path": "dataset/raw/disgenet/disgenet.csv",
+    "bytes": 63938215,
+    "sha256": "23d0721e14cf61a92b89366518d0d1172d9735a88398c61af969730ee5b5bb45",
+    "records": 52476,
+    "unique_gene_ids": 7399,
+    "unique_disease_ids": 7095
+  },
+  "derived_inputs": [
+    {
+      "path": "dataset/processed/disgenet.jsonl",
+      "bytes": 26001339,
+      "sha256": "d7e5ad5f81c709d521720f8578d1b086930b778a15f5d725727ca6dee7f51ca8"
+    },
+    {
+      "path": "kg/aligned/disgenet_aligned_normalized_latest.json",
+      "bytes": 5544623,
+      "sha256": "014365ede4eefa6cab7b2d6a990905d16585dfa2809e67e68fb49ffc795575df"
+    }
+  ],
+  "acquisition_provenance": {
+    "original_fetch_script": "scripts/fetch_benchmark_sources.py",
+    "source_manifest": "dataset/raw/meta/source_manifest.json",
+    "source_manifest_generated_at_unix": 1780993763,
+    "status": "cached"
+  },
+  "verification_note": "The project acquisition URL and TDC official dataset-to-Dataverse-ID mapping agree, and local record/gene/disease counts match the official task page. The Harvard metadata API returned HTTP 403 during this release audit; the license is taken from the official TDC dataset page, not inferred from TDC code licensing."
+}

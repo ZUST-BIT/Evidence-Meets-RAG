@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Meets RAG formal v3 benchmark record",
+  "type": "object",
+  "required": [
+    "id",
+    "source",
+    "task_type",
+    "question",
+    "answer",
+    "answer_type",
+    "oncology_focus",
+    "evidence_text",
+    "entities",
+    "provenance",
+    "metadata",
+    "gold_standard",
+    "is_machine_evaluable",
+    "benchmark_annotation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "answer_type": {
+      "type": "string"
+    },
+    "oncology_focus": {
+      "type": "string"
+    },
+    "evidence_text": {
+      "type": "string"
+    },
+    "entities": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "gold_standard": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "benchmark_annotation": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "is_machine_evaluable": {
+      "const": true
+    }
+  },
+  "additionalProperties": true
+}

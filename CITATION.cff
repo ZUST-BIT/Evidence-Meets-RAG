@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software and the upstream datasets when using the reproduction package."
+type: software
+title: "Evidence Meets RAG"
+authors:
+  - name: "ZUST-BIT"
+version: 0.1.0
+date-released: 2026-10-27
+repository-code: "https://github.com/ZUST-BIT/Evidence-Meets-RAG"
+license: MIT

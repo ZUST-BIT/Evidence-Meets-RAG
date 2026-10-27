@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "source": "Broad DepMap native inputs",
+  "required_release": "DepMap Public 26Q1",
+  "release_basis": "The paper extraction code labels this source 26Q1; original raw files and acquisition log are not available for direct historical checksum comparison.",
+  "official_release_notes": "https://forum.depmap.org/t/announcing-the-26q1-release/4606",
+  "official_download_page": "https://depmap.org/portal/data_page/?tab=allData",
+  "official_metadata_endpoint": "https://depmap.org/portal/api/no-captcha/download/files",
+  "metadata_endpoint_documentation": "https://forum.depmap.org/t/provide-an-open-endpoint-for-latest-version-retrieval/4652",
+  "access_audit": {
+    "checked_on": "2026-10-27",
+    "metadata_response_http_status": 200,
+    "metadata_response_type": "text/html; charset=utf-8",
+    "metadata_response_title": "DepMap \u2014 Verification",
+    "rows_parsed": 0,
+    "note": "An HTML verification page is not treated as a valid file catalogue. No attempt is made to bypass browser verification."
+  },
+  "files": [
+    {
+      "target": "dataset/raw/DepMap/model-condition-mapping/Model.csv",
+      "filename": "Model.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/crispr-screen/CRISPRGeneEffect.csv",
+      "filename": "CRISPRGeneEffect.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/crispr-screen/CRISPRGeneDependency.csv",
+      "filename": "CRISPRGeneDependency.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/expression/OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+      "filename": "OmicsExpressionTPMLogp1HumanProteinCodingGenes.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/copy-number/OmicsCNGeneWGS.csv",
+      "filename": "OmicsCNGeneWGS.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/mutations/OmicsSomaticMutationsMatrixHotspot.csv",
+      "filename": "OmicsSomaticMutationsMatrixHotspot.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/mutations/OmicsSomaticMutationsMatrixDamaging.csv",
+      "filename": "OmicsSomaticMutationsMatrixDamaging.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/global-genomic-features/OmicsGlobalSignatures.csv",
+      "filename": "OmicsGlobalSignatures.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/global-genomic-features/OmicsInferredMolecularSubtypes.csv",
+      "filename": "OmicsInferredMolecularSubtypes.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    },
+    {
+      "target": "dataset/raw/DepMap/model-condition-mapping/PortalCompounds.csv",
+      "filename": "PortalCompounds.csv",
+      "release": "DepMap Public 26Q1",
+      "download_page": "https://depmap.org/portal/data_page/?tab=allData",
+      "acquisition": "Select this exact release and filename in the official download UI; preserve its publisher metadata and receipt.",
+      "fixed_download_url": null,
+      "publisher_md5": null,
+      "historical_sha256": null,
+      "status": "exact_file_required_publisher_url_and_hash_not_recovered"
+    }
+  ],
+  "not_substitutes": {
+    "older_24q4_release": {
+      "doi": "10.25452/figshare.plus.27993248.v1",
+      "license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "reason": "Verified official downloadable release, but different quarter and file schemas; not substituted for paper 26Q1 inputs."
+    },
+    "chronos_parameters_26q1_v1": {
+      "doi": "10.6084/m9.figshare.31660582.v1",
+      "license": {
+        "value": 1,
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "gene_effect_file": {
+        "id": 62677015,
+        "name": "gene_effect.csv",
+        "size": 431100903,
+        "computed_md5": "b47defe8ac4171b1db636359ca5ecccf",
+        "download_url": "https://ndownloader.figshare.com/files/62677015"
+      },
+      "reason": "A genuine publisher parameter artifact, not independently verified as the corrected CRISPRGeneEffect.csv required by this pipeline; not installed under that filename."
+    }
+  },
+  "public_evidencenet_v10": {
+    "doi": "10.6084/m9.figshare.31888399.v10",
+    "file_count": 25,
+    "exact_depmap_or_tcga_normalized_snapshot_present": false,
+    "note": "Public contents contain literature graphs/records for HCC, CRC and SLE plus validation/support files, not the paper TCGA/DepMap normalized or mixed raw corpora."
+  },
+  "source_terms": "Broad staff state that newly generated data use source-specific research-use terms; the older general CC BY 4.0 guidance is not assumed to license 26Q1. See official metadata endpoint documentation above."
+}

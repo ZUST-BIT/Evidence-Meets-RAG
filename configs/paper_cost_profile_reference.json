@@ -1,0 +1,33 @@
+{
+  "design": {
+    "latency": "differential timing: (T_limit101 - T_limit1)/100, retrieval-only, naive_rag top-k=8, single process, Apple Silicon laptop",
+    "context_tokens": "mean serialized retrieved text per query at k=8 from the main Vanilla runs, chars/4 approximation",
+    "construction": "deterministic rule chain, no LLM calls at build time"
+  },
+  "forms": {
+    "document_corpus": {
+      "retrieval_units": 18251,
+      "disk_docs_mb": 380,
+      "disk_edges_mb": 2.7,
+      "index_load_s": 2.4,
+      "per_query_retrieval_s": 0.011,
+      "avg_context_tokens_k8": 3149
+    },
+    "semantic_kg": {
+      "retrieval_units": 51980,
+      "disk_docs_mb": 151,
+      "disk_edges_mb": 241,
+      "index_load_s": 1.8,
+      "per_query_retrieval_s": 0.135,
+      "avg_context_tokens_k8": 2982
+    },
+    "evidence_graph": {
+      "retrieval_units": 351783,
+      "disk_docs_mb": 2200,
+      "disk_edges_mb": 1000,
+      "index_load_s": 119.2,
+      "per_query_retrieval_s": 1.678,
+      "avg_context_tokens_k8": 2996
+    }
+  }
+}

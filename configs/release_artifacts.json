@@ -1,0 +1,272 @@
+{
+  "version": "0.1.0",
+  "format": 1,
+  "repository": "https://github.com/ZUST-BIT/Evidence-Meets-RAG",
+  "artifacts": [
+    {
+      "name": "build-inputs.tar.gz",
+      "size_bytes": 172119363,
+      "sha256": "e241b2d97990951ebb63af221bf883bf27a7274a3751c0e19af7f057488e8efb",
+      "files": [
+        {
+          "path": "kg/aligned/pubmed_aligned_normalized_latest.json",
+          "size_bytes": 149811309,
+          "sha256": "cc306ca0acf0f1fd50e7a9bb75afb72c26ba127d9802800315c9496f78cb0815"
+        },
+        {
+          "path": "kg/aligned/tcga_atomic_compact_normalized_latest.json",
+          "size_bytes": 818985284,
+          "sha256": "0c28dc9a55f0a12517d63755222e44592cdb602f777fa6595f44e7c7352bfe83"
+        },
+        {
+          "path": "kg/aligned/depmap_atomic_compact_normalized_latest.json",
+          "size_bytes": 10532160,
+          "sha256": "afc3c368811bbadc86d95a4863a9c2f0a1bd07882c5ec8abec1fb8315735990b"
+        },
+        {
+          "path": "kg/aligned/disgenet_aligned_normalized_latest.json",
+          "size_bytes": 5544623,
+          "sha256": "014365ede4eefa6cab7b2d6a990905d16585dfa2809e67e68fb49ffc795575df"
+        },
+        {
+          "path": "kg/aligned/cellline_annotation_aligned_normalized_latest.json",
+          "size_bytes": 399076,
+          "sha256": "cc0a59d73c0c7e71c3ff7a9087a5e879e995f02681487675b2402b211c2512b6"
+        },
+        {
+          "path": "kg/raw-multisource/raw_multisource_docs.jsonl",
+          "size_bytes": 561665871,
+          "sha256": "24c0bc644221cc09179d8c9f446b7e7149116e1eed47119524bfeb293f825cc8"
+        },
+        {
+          "path": "kg/raw-multisource/raw_multisource_edges.jsonl",
+          "size_bytes": 23870286,
+          "sha256": "999d8ba4beb51cfe9e665147e900001f3a0c9e7cbe87b0de0c10032f207675cf"
+        },
+        {
+          "path": "kg/raw-multisource/raw_multisource_manifest.jsonl",
+          "size_bytes": 64395351,
+          "sha256": "ec2d5adeec399c542862d40d126e724c6d2a874c5f1c50d86fa89de9ac66244a"
+        }
+      ],
+      "group": "build",
+      "url": null,
+      "publication_state": "local verification archive only; native-source download and local construction are the public workflow"
+    },
+    {
+      "name": "frozen-contexts.tar.gz",
+      "size_bytes": 117412831,
+      "sha256": "986794d1a433d58c7d1d67e974c1a02518e5977b4a2f5637685914af99338533",
+      "files": [
+        {
+          "path": "dataset/frozen_contexts/dual_source/tcga_pubmed_controlled_retrieval.jsonl",
+          "size_bytes": 3466675,
+          "sha256": "6b924262926b41aec31a49ab66bd8e53e231b3f131e556729cde4853bdcc4a57"
+        },
+        {
+          "path": "dataset/frozen_contexts/long_context/evidence_graph_complete.jsonl",
+          "size_bytes": 284532848,
+          "sha256": "110c55e274175aa42933e89a734ada972d658a699839888a9fb164b90bcb6112"
+        },
+        {
+          "path": "dataset/frozen_contexts/long_context/raw_observation_view.jsonl",
+          "size_bytes": 213285696,
+          "sha256": "7db53c47c504989df01695a461abe5cacd8b90c16d0e278adeb94cd59566efdf"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/crag_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 25579309,
+          "sha256": "5369156eaa71c9e56a84167f99624b909e9dfc1b7da96918b5318d5c40e26f9d"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/crag_rag__raw_observation_view.jsonl",
+          "size_bytes": 15682713,
+          "sha256": "a5aaa512988e04f2c75798d8a94deec9ceb0f956ac16b9e4b2deeb02ff2c0d91"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/crag_rag__semantic_kg.jsonl",
+          "size_bytes": 15885762,
+          "sha256": "1d9bf8a4a371919a5c84ffaaadaed96a762310dd032f5c6acd374b5e53c6eba5"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/dense_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 16273890,
+          "sha256": "3c2f7684c549fe6c4692d0af2c805eadf7409eeeb8403b726ca78977ec35dcd8"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/dense_rag__raw_observation_view.jsonl",
+          "size_bytes": 12068144,
+          "sha256": "12c01d64ae70e6f90d6dade2751ace94b7f90ceaabc4f55dadb70cd6e5a635e2"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/dense_rag__semantic_kg.jsonl",
+          "size_bytes": 13175429,
+          "sha256": "e2b3d4300bc69a25df11e12b4c7205d69a5bac9dde30492c52ad6ca808a4063d"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/graph_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 22880825,
+          "sha256": "3b47f204c2f070df92ab00ab32161f602c48173c659ca3b560d85cf4e87cd1b5"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/graph_rag__raw_observation_view.jsonl",
+          "size_bytes": 15566614,
+          "sha256": "54368d7034206007c793ebda18aef308aa4fdfc831cfeca7e4744a1de025aaf7"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/graph_rag__semantic_kg.jsonl",
+          "size_bytes": 15010150,
+          "sha256": "5022e2012585982308b734b0b7e331785ca8e102c6b1d456e349ecba08965a06"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/hybrid_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 23081940,
+          "sha256": "003ea07436b19931333579cb8952c369a9ab7b916393e400db26314fb53c06f9"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/hybrid_rag__raw_observation_view.jsonl",
+          "size_bytes": 20266922,
+          "sha256": "55e0699b6a9997f9240ba5b42be801811a5f174b7681ae19ca60aa7f9a14e68f"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/hybrid_rag__semantic_kg.jsonl",
+          "size_bytes": 15159643,
+          "sha256": "60856aa8a28b1de7cf4fdcd55a9eca08e62973b597d438f61e8260ae1317d4bc"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/kg2rag__evidence_graph_complete.jsonl",
+          "size_bytes": 18407884,
+          "sha256": "209d36418ecfd4e58ce93ca1e6f4159718d0373a000813e64ba2e31934cd1218"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/kg2rag__raw_observation_view.jsonl",
+          "size_bytes": 14148770,
+          "sha256": "a8ea71dda752fd6303db97af6d2a6554860255f7c285366a7d003c4661faa9f9"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/kg2rag__semantic_kg.jsonl",
+          "size_bytes": 14329329,
+          "sha256": "eb7c22be0a0c45f8ea18031e2f31010d6fcabc2ba2829943e93e904448ad95f0"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/naive_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 22868085,
+          "sha256": "e350aa844c1dae282605c03091ed8eb87141565fd8bbbdb12c05bdddce8980ae"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/naive_rag__raw_observation_view.jsonl",
+          "size_bytes": 20552881,
+          "sha256": "1a3b876703fecb176aa99bffaefd5dd4d0266ed667bc97a93ea1341eaffc8497"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/naive_rag__semantic_kg.jsonl",
+          "size_bytes": 15169559,
+          "sha256": "66cc8d70698d14d95c42ae396e3f87ae39aab73b1d8b8e09a774bb4e0b198c26"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/raptor_rag__evidence_graph_complete.jsonl",
+          "size_bytes": 17745457,
+          "sha256": "4118971a237bc24af6c7c07cadc5c7ed702722cc2175cf592a4887f3d3b30c2d"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/raptor_rag__raw_observation_view.jsonl",
+          "size_bytes": 18384755,
+          "sha256": "4c598b270f847aa1508625c3bad3ce49ed7af7ba1c927454497038495fdad0ce"
+        },
+        {
+          "path": "dataset/frozen_contexts/main/raptor_rag__semantic_kg.jsonl",
+          "size_bytes": 15159643,
+          "sha256": "60856aa8a28b1de7cf4fdcd55a9eca08e62973b597d438f61e8260ae1317d4bc"
+        },
+        {
+          "path": "dataset/frozen_contexts/manifest.json",
+          "size_bytes": 7348,
+          "sha256": "9e5f2273b1d809710953239f61f8f2e112b34e671a0b2221d9458036758aa2fe"
+        },
+        {
+          "path": "dataset/frozen_contexts/source_forms/single_source_form_retrieval_571.jsonl",
+          "size_bytes": 94240411,
+          "sha256": "387e14c3c4370d68826fbe5bd0160aa1b4b24cdacf05bc49c926d812af36de0e"
+        },
+        {
+          "path": "dataset/frozen_contexts/stage/R0_retrieval.jsonl",
+          "size_bytes": 23078183,
+          "sha256": "6ac1e197b65be41d80589f4066c006ea223fdab3945061ea7f1d8afb126c4a9f"
+        },
+        {
+          "path": "dataset/frozen_contexts/stage/R1_retrieval.jsonl",
+          "size_bytes": 22880825,
+          "sha256": "089a170d1122d243e6a2ff1afcff61dba37cd1b84795b36227b6b12891d26cd5"
+        }
+      ],
+      "group": "contexts",
+      "url": null,
+      "publication_state": "local verification archive only; native-source download and local construction are the public workflow"
+    },
+    {
+      "name": "retrieval-corpora.tar.gz",
+      "size_bytes": 503647927,
+      "sha256": "cd645f5a6bd9a6516f8369d87f9b7caee6c370a4657ddd32a5831756217631f7",
+      "files": [
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/raw_observation_view_docs.jsonl",
+          "size_bytes": 398838602,
+          "sha256": "11a2ecb9959d50e05f71a989d359123e64ceeb28a02419fd108f9d97c8b1f573"
+        },
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/raw_observation_view_edges.jsonl",
+          "size_bytes": 2835714,
+          "sha256": "b24cfb0abab9f2705702abb1a3dff4fb4de2239a02d130434a25a36060982f62"
+        },
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/semantic_kg_docs.jsonl",
+          "size_bytes": 158375323,
+          "sha256": "d1cbe6d19db6ccc9fb5ae2a69b402ec5a10ed6e3300dee14bb986629cbf4d850"
+        },
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/semantic_kg_edges.jsonl",
+          "size_bytes": 252964380,
+          "sha256": "64ee6ab7ed6a107c7781d791aebc6accb7fc97b2a9cec242011a1370d2264cf2"
+        },
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/evidence_graph_complete_docs.jsonl",
+          "size_bytes": 2380693932,
+          "sha256": "275d23664fd00c7b99dd1b1a4bc90ed0bb6c7c0791674c785f75b8343e68537c"
+        },
+        {
+          "path": "dataset/frozen_corpora/retrieval/multi_cancer/evidence_graph_complete_edges.jsonl",
+          "size_bytes": 1063599168,
+          "sha256": "06231a8fb45dce10a5a797e10cc2feeea9b13c23d9292361174412227c4b88bc"
+        }
+      ],
+      "group": "retrieval",
+      "url": null,
+      "publication_state": "local verification archive only; native-source download and local construction are the public workflow"
+    },
+    {
+      "name": "matched-corpora.tar.gz",
+      "size_bytes": 107105605,
+      "sha256": "e2e788f0d83e5cafbcda810296a0f0553c05219413ec3e4884b7c7b1143c7968",
+      "files": [
+        {
+          "path": "dataset/rag/analysis/ecorag_budget_control/doc_corpus_matched_18251_docs.jsonl",
+          "size_bytes": 398838602,
+          "sha256": "004ca9daff76d6799e501b5f730489b3ccd46df40b5aaa863fca11a959bc7b7f"
+        },
+        {
+          "path": "dataset/rag/analysis/ecorag_budget_control/semantic_kg_matched_18251_docs.jsonl",
+          "size_bytes": 60510144,
+          "sha256": "ceb89fda7f07b2e32a96d5135eb0370a421ca1fdcadac59553796288b8e7b855"
+        },
+        {
+          "path": "dataset/rag/analysis/ecorag_budget_control/evidence_kg_matched_18251_docs.jsonl",
+          "size_bytes": 156790364,
+          "sha256": "d5ea6714abe458fec6450e26e21f2f349a7cef3f72a914d8973974cdf0b7fa7b"
+        }
+      ],
+      "group": "matched",
+      "url": null,
+      "publication_state": "local verification archive only; native-source download and local construction are the public workflow"
+    }
+  ]
+}

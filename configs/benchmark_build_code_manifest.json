@@ -1,0 +1,54 @@
+{
+  "description": "Benchmark construction code in this release, adapted from the project scripts. Paths are relative and source artifacts are input snapshots rather than experimental results.",
+  "files": [
+    {
+      "path": "scripts/benchmark/build_benchmark_dataset.py",
+      "bytes": 35709,
+      "sha256": "698735affe24c5c5290bf33d54601c89dcae7e5dc0735ba56b43b25ba5c0247e",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/build_external_mechanism_benchmark.py",
+      "bytes": 100444,
+      "sha256": "aa68e5a613497ac9902e389df23c60c97ad30a0b48666e50bb66512e8a073c21",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/build_reasoning_benchmark_formal_v2.py",
+      "bytes": 60712,
+      "sha256": "4d09fb72eacb09137c92166d2ff178c8cd269804d95d6d2a95dbf9fe111c646d",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/fetch_evidencenet.py",
+      "bytes": 218,
+      "sha256": "207c5a13d163af94ad78a570f6defea282565219b6883d989b0a08110a2896c3",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/fetch_native_sources.py",
+      "bytes": 7672,
+      "sha256": "62cf18d8102239ce5c5b1a254615866e8a51f59b510c71f1b62f815a8c45ca4e",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/prepare_sources.py",
+      "bytes": 3598,
+      "sha256": "58123bfb03eb0659fdc0090f4786fc99267800b313f460996876175f17ebb4ea",
+      "original_project_script": null,
+      "original_sha256": null
+    },
+    {
+      "path": "scripts/benchmark/validate_benchmark.py",
+      "bytes": 3654,
+      "sha256": "eb208d9ce108e37f23b78a72ade77ab475466ef17e52716bbd11cafc6b2a7cce",
+      "original_project_script": null,
+      "original_sha256": null
+    }
+  ]
+}

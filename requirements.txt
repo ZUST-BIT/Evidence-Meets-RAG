@@ -1,0 +1,9 @@
+requests>=2.32,<3
+numpy>=1.26,<3
+pandas>=2.2,<3
+pyarrow>=16,<22
+jsonschema>=4.19,<5
+pypdf>=5,<7
+cryptography>=43,<47
+matplotlib>=3.8,<4
+reportlab>=4,<5

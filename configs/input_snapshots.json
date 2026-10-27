@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "status": "maintainer_asset_manifest_draft",
+  "prediction_outputs_included": false,
+  "assets": [
+    {
+      "name": "frozen-contexts",
+      "destination": "dataset/frozen_contexts",
+      "export_command": "python scripts/export_paper_contexts.py --archive-root ARCHIVE --output-dir STAGING/frozen_contexts",
+      "description": "21 main contexts; R0/R1 stage contexts; two top100 contexts; source-form and dual-source contexts. No predictions or judge labels.",
+      "required_by": [
+        "main --input-mode frozen",
+        "stages --input-mode frozen",
+        "long-context --input-mode frozen",
+        "source-forms --input-mode frozen",
+        "dual-source --input-mode frozen"
+      ]
+    },
+    {
+      "name": "retrieval-control-corpora",
+      "destination": "dataset/frozen_corpora/retrieval/multi_cancer",
+      "description": "Original archived prepared corpora for Table5 top-k/BM25 controls. Evidence text has the added linked-summary lines, so it must not replace Table4 frozen packs.",
+      "files": [
+        "raw_observation_view_docs.jsonl",
+        "semantic_kg_docs.jsonl",
+        "evidence_graph_complete_docs.jsonl",
+        "raw_observation_view_edges.jsonl",
+        "semantic_kg_edges.jsonl",
+        "evidence_graph_complete_edges.jsonl"
+      ],
+      "required_by": [
+        "retrieval-controls --stage hyperparam",
+        "corpus-audit",
+        "profile"
+      ]
+    },
+    {
+      "name": "matched-corpora",
+      "destination": "dataset/rag/analysis/ecorag_budget_control",
+      "description": "Three fixed 18,251-unit corpora; optional asset instead of selecting exact configs/matched_corpus_ids.json from a restored source corpus.",
+      "files": [
+        "doc_corpus_matched_18251_docs.jsonl",
+        "semantic_kg_matched_18251_docs.jsonl",
+        "evidence_kg_matched_18251_docs.jsonl"
+      ],
+      "required_by": [
+        "retrieval-controls --stage budget"
+      ]
+    },
+    {
+      "name": "stage-corpus",
+      "destination": "dataset/frozen_corpora/stage/multi_cancer",
+      "description": "Optional full graph docs+edges for repeating graph retrieval instead of using released R0/R1 contexts.",
+      "files": [
+        "evidence_graph_complete_docs.jsonl",
+        "evidence_graph_complete_edges.jsonl"
+      ],
+      "required_by": [
+        "stages --input-mode retrieve"
+      ]
+    }
+  ]
+}

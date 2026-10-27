@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "benchmark": {
+    "path": "dataset/evaluated/external_reasoning_benchmark_formal_v3_571.jsonl",
+    "bytes": 1917087,
+    "sha256": "191ce330e81366cf893c327d3a7d69b30e74c769bd77e9f443f4155b73ccc405"
+  },
+  "record_count": 571,
+  "record_fields": [
+    "id",
+    "source",
+    "task_type",
+    "question",
+    "answer",
+    "answer_type",
+    "oncology_focus",
+    "evidence_text",
+    "entities",
+    "provenance",
+    "metadata",
+    "gold_standard",
+    "is_machine_evaluable",
+    "benchmark_annotation"
+  ],
+  "by_task_type": {
+    "cross_source_corroboration_status": 100,
+    "cross_source_support_bundle": 81,
+    "evidence_signal_interpretation": 85,
+    "hierarchical_evidence_aggregation": 86,
+    "mechanism_bioasq_factoid": 7,
+    "mechanism_bioasq_list": 7,
+    "mechanism_bioasq_yesno": 5,
+    "mechanism_trace_intermediate_gene": 100,
+    "precision_oncology_evidence": 100
+  },
+  "by_reasoning_family": {
+    "cross_source_corroboration": 100,
+    "evidence_signal_interpretation": 97,
+    "hierarchical_evidence_aggregation": 93,
+    "multi_evidence_logical_synthesis": 81,
+    "multi_hop_evidence_reasoning": 100,
+    "precision_oncology_evidence_judgment": 100
+  },
+  "by_cancer_family": {
+    "aml": 84,
+    "brca": 67,
+    "crc": 93,
+    "gastroesoph": 29,
+    "glioma": 79,
+    "hcc": 34,
+    "hnsc": 36,
+    "nsclc": 45,
+    "ovarian": 35,
+    "paad": 32,
+    "rcc": 37
+  },
+  "by_source_dataset": {
+    "BioASQ": 19,
+    "CIViC": 243,
+    "ClinVar": 28,
+    "External Multisource": 281
+  },
+  "construction_inputs": [
+    {
+      "path": "dataset/evaluated/construction/formal_seed_73.jsonl",
+      "bytes": 179923,
+      "sha256": "9530a512504f247391714d774df8c35ad5e29024c057f64e360802a450b20ae0"
+    },
+    {
+      "path": "dataset/evaluated/construction/historical_seed_task_counts.json",
+      "bytes": 475,
+      "sha256": "f9bbc30397512c49abb10a4c761c970bdca0ab796be21f3c6eead1c36e06b338"
+    }
+  ],
+  "input_protocol": "All original benchmark fields are retained, including entity/disease anchors, external support annotations, answer options, reference answers and provenance. For mechanistic tracing, the supplied gene anchors include the scored intermediate gene. Reference/evidence fields are evaluation annotations, not retrieved source documents.",
+  "reasoning_vs_task_note": "The six paper reasoning families group the nine task_type values. Twelve BioASQ factoid/yesno questions join evidence_signal_interpretation; seven BioASQ list questions join hierarchical_evidence_aggregation.",
+  "frozen_data_policy": "The canonical JSONL is byte-identical to the paper benchmark. Construction uses 73 retained seeds; historical 499-record input is reduced to task counts because it was used only for a construction-summary histogram.",
+  "licenses": "Source-specific attribution and terms in docs/data.md and data_sources/benchmark/NOTICE.md apply separately from the code license.",
+  "construction": {
+    "seed_path": "dataset/evaluated/construction/formal_seed_73.jsonl",
+    "seed_count": 73,
+    "historical_task_histogram": "dataset/evaluated/construction/historical_seed_task_counts.json",
+    "archived_annotation_overrides": "dataset/evaluated/construction/record_overrides.json",
+    "override_record_count": 1,
+    "grouped_ids": "Historical CIViC grouped IDs reused only for exact question/answer matches; stable SHA-256 fallback.",
+    "entry_point": "scripts/benchmark/build_reasoning_benchmark_formal_v2.py",
+    "default_output": "dataset/evaluated/rebuilt/external_reasoning_benchmark_formal_v3_571.jsonl"
+  }
+}

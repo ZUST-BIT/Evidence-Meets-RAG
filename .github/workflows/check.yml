@@ -1,0 +1,20 @@
+name: Offline checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -r requirements-lock.txt
+      - run: python -m compileall -q scripts tests
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/reproduce_paper.py smoke
+      - run: python scripts/smoke_knowledge_pipeline.py
+      - run: python scripts/benchmark/validate_benchmark.py

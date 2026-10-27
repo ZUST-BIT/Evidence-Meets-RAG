@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "description": "Exact compact processed supporting-source inputs and frozen HGNC lookup used by the paper. Restore without invoking the legacy broad benchmark-data collector. No GDSC dose-response matrices or measurements are included.",
+  "entries": [
+    {
+      "target": "dataset/processed/disgenet.jsonl",
+      "snapshot": "data_sources/supporting/disgenet.jsonl.gz",
+      "bytes": 26001339,
+      "sha256": "d7e5ad5f81c709d521720f8578d1b086930b778a15f5d725727ca6dee7f51ca8",
+      "snapshot_bytes": 2943090,
+      "snapshot_sha256": "5504e9b6f9c7f97ce4ed2d0005f8932e7316df03c1be21d3444ee24333eae200",
+      "compression": "gzip",
+      "license": "CC BY-NC-SA 4.0",
+      "terms_url": "https://tdcommons.ai/multi_pred_tasks/gdi/",
+      "records": 18543
+    },
+    {
+      "target": "dataset/processed/tdc_cell_line.jsonl",
+      "snapshot": "data_sources/supporting/tdc_cell_line.jsonl.gz",
+      "bytes": 992073,
+      "sha256": "bcbefd679854603d8e50fee0036ec459c9bc3fb6b3fb5fe9a976beac7c2a6467",
+      "snapshot_bytes": 49576,
+      "snapshot_sha256": "25e71c22e2bed48a2ed3225047f5a9e1f6e7ae0dfb08a5f08f7ffd3b59cc1150",
+      "compression": "gzip",
+      "license": "Broad DepMap source terms; Cellosaurus CC BY 4.0",
+      "terms_url": "https://www.cellosaurus.org/description.html",
+      "records": 723
+    },
+    {
+      "target": "kg/normalization/raw/hgnc_complete_set.txt",
+      "snapshot": "data_sources/supporting/hgnc_complete_set.txt.gz",
+      "bytes": 16740441,
+      "sha256": "62e6f29f9249233a552f75ed2ede1522accce8715125b0b815115a8dab9af60b",
+      "snapshot_bytes": 4034199,
+      "snapshot_sha256": "e0375f685c7f41d15ebf8f760e8eb76b2d4dd82c8bb9ea77f4d38d265edfed1c",
+      "compression": "gzip",
+      "license": "CC0 1.0",
+      "terms_url": "https://www.genenames.org/about/license/",
+      "data_rows": 44997
+    }
+  ],
+  "expected_support_graphs": {
+    "disgenet": {
+      "nodes": 1958,
+      "edges": 2452,
+      "evidence": 1226,
+      "entities": 732
+    },
+    "cellline_annotation": {
+      "nodes": 182,
+      "edges": 176,
+      "evidence": 88,
+      "entities": 94
+    }
+  }
+}

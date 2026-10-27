@@ -1,0 +1,44 @@
+{
+  "description": "Frozen inputs to the explicit snapshot build command below. Normalized graphs include the paper source-internal relations. This is an alternative to rerunning extraction from large source-native matrices.",
+  "required_repo_files": [
+    "kg/schema/multisource_evidence_kg_schema_v2.json",
+    "configs/raw_parent_id_map.json",
+    "dataset/evaluated/external_reasoning_benchmark_formal_v3_571.jsonl"
+  ],
+  "inputs": [
+    {
+      "path": "kg/aligned/pubmed_aligned_normalized_latest.json",
+      "size_bytes": 149811309
+    },
+    {
+      "path": "kg/aligned/tcga_atomic_compact_normalized_latest.json",
+      "size_bytes": 818985284
+    },
+    {
+      "path": "kg/aligned/depmap_atomic_compact_normalized_latest.json",
+      "size_bytes": 10532160
+    },
+    {
+      "path": "kg/aligned/disgenet_aligned_normalized_latest.json",
+      "size_bytes": 5544623
+    },
+    {
+      "path": "kg/aligned/cellline_annotation_aligned_normalized_latest.json",
+      "size_bytes": 399076
+    },
+    {
+      "path": "kg/raw-multisource/raw_multisource_docs.jsonl",
+      "size_bytes": 561665871
+    },
+    {
+      "path": "kg/raw-multisource/raw_multisource_edges.jsonl",
+      "size_bytes": 23870286
+    },
+    {
+      "path": "kg/raw-multisource/raw_multisource_manifest.jsonl",
+      "size_bytes": 64395351
+    }
+  ],
+  "command": "python scripts/build_knowledge_pipeline.py --stages integrate complete semantic project controlled_forms single_source --run",
+  "note": "Skip the raw extraction stage when using these frozen raw-corpus inputs. Source-native extraction is independently available."
+}

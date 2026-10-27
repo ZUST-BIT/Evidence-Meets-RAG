@@ -1,0 +1,1044 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "kg/schema/multisource_evidence_kg_schema_v2.json",
+  "title": "Unified multi-source evidence knowledge graph schema (compact v2)",
+  "description": "Compact schema for a unified evidence-centric biomedical knowledge graph spanning PubMed literature, LinkedOmics TCGA cohorts, and DepMap functional genomics. Evidence nodes keep only reasoning-critical fields plus source-specific context blocks, while repeated disease/entity/cohort metadata remains on dedicated cohort and entity nodes or in provenance.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "graph_metadata",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["2.0.0", "2.1.0"]
+    },
+    "graph_metadata": {
+      "type": "object",
+      "required": [
+        "graph_id",
+        "graph_name",
+        "created_by",
+        "created_at",
+        "source_families",
+        "disease_scope"
+      ],
+      "properties": {
+        "graph_id": {
+          "type": "string"
+        },
+        "graph_name": {
+          "type": "string"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_families": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceFamily"
+          },
+          "minItems": 1
+        },
+        "disease_scope": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "build_parameters": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/evidenceNode"
+          },
+          {
+            "$ref": "#/$defs/entityNode"
+          },
+          {
+            "$ref": "#/$defs/cohortNode"
+          },
+          {
+            "$ref": "#/$defs/observationNode"
+          }
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "sourceFamily": {
+      "type": "string",
+      "enum": [
+        "pubmed_literature",
+        "tcga_linkedomics",
+        "depmap",
+        "disgenet",
+        "cellline_annotation",
+        "integrated"
+      ]
+    },
+    "entityType": {
+      "type": "string",
+      "enum": [
+        "Gene",
+        "Protein",
+        "Disease",
+        "Drug",
+        "Pathway",
+        "CellType",
+        "CellLine",
+        "Phenotype",
+        "Cohort",
+        "Tissue",
+        "Other"
+      ]
+    },
+    "entityRef": {
+      "type": "object",
+      "required": [
+        "label",
+        "entity_type"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "entity_type": {
+          "$ref": "#/$defs/entityType"
+        }
+      },
+      "additionalProperties": false
+    },
+    "citation": {
+      "type": "object",
+      "properties": {
+        "doi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "pmid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "journal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "year": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "impact_factor": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "jcr_quartile": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citation_count": {
+          "type": [
+            "integer",
+            "number",
+            "null"
+          ]
+        },
+        "pdf_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "required": [
+        "sample_grouping",
+        "comparison_type",
+        "comparison_label"
+      ],
+      "properties": {
+        "sample_grouping": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comparison_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comparison_label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "group_a": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "group_b": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "n_total": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "n_effective": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "n_group_a": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "n_group_b": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "statistics": {
+      "type": "object",
+      "required": [
+        "sample_size",
+        "effect_size"
+      ],
+      "properties": {
+        "p_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "q_value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "fold_change": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "confidence_interval": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sample_size": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "effect_size": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "hazard_ratio": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "mutation_frequency": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ceres_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "codependency_coefficient": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "synergy_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "statistical_method": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "confidence": {
+      "type": "object",
+      "required": [
+        "grade",
+        "score"
+      ],
+      "properties": {
+        "grade": {
+          "type": "string"
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "study_quality_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "statistical_support_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "source_reliability_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "sample_size_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "extraction_confidence": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ds_belief": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ds_plausibility": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "ds_ignorance": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "contradiction_risk": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "data_completeness": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "review_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "supportFlags": {
+      "type": "object",
+      "required": [
+        "supports_target_discovery",
+        "supports_mechanism_inference",
+        "supports_drug_repositioning"
+      ],
+      "properties": {
+        "supports_target_discovery": {
+          "type": "boolean"
+        },
+        "supports_mechanism_inference": {
+          "type": "boolean"
+        },
+        "supports_drug_repositioning": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_family",
+        "source_dataset",
+        "source_release",
+        "source_record_id",
+        "source_file",
+        "analysis_pipeline",
+        "extractor_name",
+        "extractor_version",
+        "extracted_at",
+        "study_design",
+        "clinical_stage",
+        "is_primary_observation",
+        "source_priority"
+      ],
+      "properties": {
+        "source_family": {
+          "$ref": "#/$defs/sourceFamily"
+        },
+        "source_dataset": {
+          "type": "string"
+        },
+        "source_release": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_record_id": {
+          "type": "string"
+        },
+        "source_file": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citation_doi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citation_pmid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "platform": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "assay": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sequencing_or_screen_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "batch_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "analysis_pipeline": {
+          "type": "string"
+        },
+        "extractor_name": {
+          "type": "string"
+        },
+        "extractor_version": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "extracted_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "study_design": {
+          "type": "string"
+        },
+        "clinical_stage": {
+          "type": "string"
+        },
+        "licence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "is_primary_observation": {
+          "type": "boolean"
+        },
+        "source_priority": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidenceNode": {
+      "type": "object",
+      "required": [
+        "node_type",
+        "id",
+        "record_id",
+        "source_family",
+        "disease",
+        "cohort_id",
+        "subject",
+        "predicate",
+        "direction",
+        "polarity",
+        "claim_scope",
+        "hypothesis_level",
+        "support",
+        "evidence_category",
+        "feature_layer",
+        "aggregation_level",
+        "summary",
+        "metric",
+        "value",
+        "comparison",
+        "statistics",
+        "confidence",
+        "provenance",
+        "created_at",
+        "version"
+      ],
+      "properties": {
+        "node_type": {
+          "type": "string",
+          "const": "evidence"
+        },
+        "id": {
+          "type": "string"
+        },
+        "record_id": {
+          "type": "string"
+        },
+        "source_family": {
+          "$ref": "#/$defs/sourceFamily"
+        },
+        "disease": {
+          "type": "string"
+        },
+        "cohort_id": {
+          "type": "string"
+        },
+        "subject": {
+          "$ref": "#/$defs/entityRef"
+        },
+        "object": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/entityRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "outcome": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/entityRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "predicate": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string"
+        },
+        "polarity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hypothesis_level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "support": {
+          "$ref": "#/$defs/supportFlags"
+        },
+        "evidence_category": {
+          "type": "string"
+        },
+        "feature_layer": {
+          "type": "string"
+        },
+        "aggregation_level": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "raw_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "metric": {
+          "type": "string"
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comparison": {
+          "$ref": "#/$defs/comparison"
+        },
+        "statistics": {
+          "$ref": "#/$defs/statistics"
+        },
+        "confidence": {
+          "$ref": "#/$defs/confidence"
+        },
+        "citation": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/citation"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_context": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "reviewer_comments": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "version": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "aggregation_parent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "entityNode": {
+      "type": "object",
+      "required": [
+        "node_type",
+        "id",
+        "name",
+        "entity_type"
+      ],
+      "properties": {
+        "node_type": {
+          "type": "string",
+          "const": "entity"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "entity_type": {
+          "$ref": "#/$defs/entityType"
+        },
+        "db_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "normalized_from": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "cohortNode": {
+      "type": "object",
+      "required": [
+        "node_type",
+        "id",
+        "cohort_label",
+        "disease_name",
+        "cohort_type"
+      ],
+      "properties": {
+        "node_type": {
+          "type": "string",
+          "const": "cohort"
+        },
+        "id": {
+          "type": "string"
+        },
+        "cohort_label": {
+          "type": "string"
+        },
+        "disease_name": {
+          "type": "string"
+        },
+        "lineage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cohort_type": {
+          "type": "string"
+        },
+        "n_effective": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "required": [
+        "source",
+        "target",
+        "relation",
+        "relation_family",
+        "created_by_rule"
+      ],
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "LINKED_TO",
+            "SUPPORTS",
+            "CONTRADICTS",
+            "CAUSAL_CHAIN",
+            "COMPLEMENTS",
+            "MECHANISM_TO_OMICS_MANIFESTATION",
+            "MECHANISM_TO_DEPENDENCY_VULNERABILITY",
+            "DRUG_MECHANISM_TO_SENSITIVITY",
+            "REDUNDANT_WITH",
+            "REFINES",
+            "EXTENDS",
+            "REPLICATES",
+            "DERIVED_FROM",
+            "OBSERVED_IN"
+          ]
+        },
+        "relation_family": {
+          "type": "string",
+          "enum": [
+            "semantic_anchor",
+            "evidence_logic",
+            "aggregation_trace"
+          ]
+        },
+        "entity_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "linking_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "similarity_score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "support_strength": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "evidence_count": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "created_by_rule": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "observationNode": {
+      "type": "object",
+      "required": [
+        "node_type",
+        "id",
+        "source_family",
+        "disease",
+        "disease_family",
+        "source_doc_id",
+        "raw_unit_type",
+        "feature_layer",
+        "source_files",
+        "entity_anchors",
+        "coverage_groups",
+        "match_type",
+        "source_context",
+        "provenance"
+      ],
+      "properties": {
+        "node_type": {
+          "type": "string",
+          "const": "observation"
+        },
+        "id": {
+          "type": "string"
+        },
+        "source_family": {
+          "$ref": "#/$defs/sourceFamily"
+        },
+        "disease": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "disease_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_doc_id": {
+          "type": "string"
+        },
+        "parent_doc_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "raw_unit_type": {
+          "type": "string"
+        },
+        "feature_layer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "entity_anchors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "coverage_groups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "match_type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_context": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

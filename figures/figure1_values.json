@@ -1,0 +1,73 @@
+{
+  "figure": 1,
+  "benchmark_count": 571,
+  "reference_pdf_sha256": "5a760e31a36a743f8b72b64c64559e5db31d5fccdc460dcaee5e4b19a0384ba9",
+  "original_editable_template_sha256": "bbd3a54bd08c2636cfaf0d3548d67fc234dc9707c916ee98a456baea2532f817",
+  "source_analysis": {
+    "component_recall": "dataset/rag/analysis/unified_571/retrieval_571.json",
+    "accuracy": "dataset/rag/analysis/unified_571/main_and_ablation.json:vanilla"
+  },
+  "metrics": {
+    "component_recall": {
+      "document": 0.22606444833625217,
+      "semantic": 0.22197898423817863,
+      "evidence": 0.6030364273204903
+    },
+    "accuracy": {
+      "document": 0.3415061295971979,
+      "semantic": 0.415061295971979,
+      "evidence": 0.4448336252189142
+    }
+  },
+  "relative_gain_baseline": "document",
+  "shape_map": {
+    "component_recall": {
+      "document": {
+        "bar": "145",
+        "label": "147"
+      },
+      "semantic": {
+        "bar": "2",
+        "label": "3"
+      },
+      "evidence": {
+        "bar": "146",
+        "label": "148"
+      },
+      "gain_label": "153"
+    },
+    "accuracy": {
+      "document": {
+        "bar": "149",
+        "label": "151"
+      },
+      "semantic": {
+        "bar": "5",
+        "label": "6"
+      },
+      "evidence": {
+        "bar": "150",
+        "label": "152"
+      },
+      "gain_label": "154"
+    }
+  },
+  "template_scale": {
+    "description": "Retain the original bar geometry and one numeric scale per metric, calibrated to its former Evidence Graph bar. These calibration values are template geometry only, not current results.",
+    "component_recall": {
+      "reference_width_emu": 2269661,
+      "reference_value": 0.654
+    },
+    "accuracy": {
+      "reference_width_emu": 1819076,
+      "reference_value": 0.4621
+    }
+  },
+  "pdf_cropbox_points": [
+    218.3608,
+    25.09828,
+    788.7675,
+    511.3127
+  ],
+  "rounding": "Display metrics to two decimal places; compute relative percent gains from full precision before rounding to an integer."
+}

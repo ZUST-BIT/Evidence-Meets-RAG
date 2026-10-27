@@ -1,0 +1,319 @@
+{
+  "metadata_only": true,
+  "official_sources": [
+    "https://pmc.ncbi.nlm.nih.gov/tools/idconv/api/v1/articles/",
+    "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+    "https://pmc-oa-opendata.s3.amazonaws.com/README.txt"
+  ],
+  "records": [
+    {
+      "target_path": "kg/papers-full/hcc_papers/Ai 等 - 2024 - Transarterial chemoembolization combined with atezolizumab plus bevacizumab conversion therapy for i.pdf",
+      "doi": "10.3389/fimmu.2024.1358602",
+      "expected_sha256": "af409261671bebb3fa6f154a983b04fe578cbf2750cefe098964880a6bde18c8",
+      "expected_md5": "fdcb3a18e1d76c72616aa73dfcad3f51",
+      "expected_size_bytes": 12780759,
+      "resolved_identifiers": {
+        "doi": "10.3389/fimmu.2024.1358602",
+        "pmid": 38863699,
+        "pmcid": "PMC11165049",
+        "live": null,
+        "release-date": null,
+        "errmsg": null
+      },
+      "status": "exact_paper_md5_available",
+      "selected": {
+        "pmcid": "PMC11165049",
+        "version": 1,
+        "pmid": 38863699,
+        "doi": "10.3389/fimmu.2024.1358602",
+        "title": "Transarterial chemoembolization combined with atezolizumab plus bevacizumab conversion therapy for intermediate-stage hepatocellular carcinoma: a case report and literature review",
+        "is_manuscript": false,
+        "license_code": "CC BY",
+        "metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11165049.1.json",
+        "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11165049.1/PMC11165049.1.pdf?md5=fdcb3a18e1d76c72616aa73dfcad3f51",
+        "cloud_md5": "fdcb3a18e1d76c72616aa73dfcad3f51",
+        "matches_paper_md5": true
+      },
+      "alternatives": [
+        {
+          "pmcid": "PMC11165049",
+          "version": 1,
+          "pmid": 38863699,
+          "doi": "10.3389/fimmu.2024.1358602",
+          "title": "Transarterial chemoembolization combined with atezolizumab plus bevacizumab conversion therapy for intermediate-stage hepatocellular carcinoma: a case report and literature review",
+          "is_manuscript": false,
+          "license_code": "CC BY",
+          "metadata_url": "https://pmc-oa-opendata.s3.amazonaws.com/metadata/PMC11165049.1.json",
+          "pdf_url": "https://pmc-oa-opendata.s3.amazonaws.com/PMC11165049.1/PMC11165049.1.pdf?md5=fdcb3a18e1d76c72616aa73dfcad3f51",
+          "cloud_md5": "fdcb3a18e1d76c72616aa73dfcad3f51",
+          "matches_paper_md5": true
+        }
+      ]
+    },
+    {
+      "target_path": "kg/papers-full/crc_papers/000525695.pdf",
+      "doi": "10.1159/000525695",
+      "expected_sha256": "7aaf46f1e8ab23ab36ff7bc12b9e14446e38b7f34204d42c3f3408df14a59c77",
+      "expected_md5": "cd360f6cf6e18913b12606d319ea488c",
+      "expected_size_bytes": 951608,
+      "resolved_identifiers": {
+        "doi": "10.1159/000525695",
+        "pmid": null,
+        "pmcid": null,
+        "live": null,
+        "release-date": null,
+        "errmsg": "Identifier not found in PMC"
+      },
+      "status": "no_unique_pmc_record",
+      "doi_landing_url": "https://doi.org/10.1159/000525695"
+    }
+  ],
+  "validated_at": "2026-10-27",
+  "full_text_downloaded": false,
+  "local_collection_verification": {
+    "passed": true,
+    "expected_file_count": 1000,
+    "missing_count": 0,
+    "mismatched_count": 0,
+    "unexpected_count": 0,
+    "missing": [],
+    "mismatched": [],
+    "unexpected": [],
+    "hashes_checked": true
+  },
+  "synthetic_verifier_checks": [
+    "exact_bytes_pass",
+    "changed_bytes_fail",
+    "missing_file_fail",
+    "unexpected_pdf_fail"
+  ],
+  "native_parser_sample": {
+    "historical_parser_version": "not recorded; no pypdf distribution was present in .dense_rag_deps",
+    "currently_locked_version": "6.21.3",
+    "scope": "Only the same five local PDFs were extracted; full 1000-PDF extraction was not run. No article text is stored in this receipt.",
+    "versions": [
+      {
+        "pypdf_version": "6.21.3",
+        "papers": 5,
+        "parents_equal": 5,
+        "chunks_generated": 265,
+        "chunks_archived": 265,
+        "papers_with_all_text_equal": 2,
+        "sample": [
+          {
+            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
+            "encrypted": false,
+            "chunks_generated": 19,
+            "chunks_archived": 19,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 13
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
+            "encrypted": false,
+            "chunks_generated": 37,
+            "chunks_archived": 37,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 23
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
+            "encrypted": true,
+            "chunks_generated": 21,
+            "chunks_archived": 21,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
+            "encrypted": false,
+            "chunks_generated": 42,
+            "chunks_archived": 42,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
+            "encrypted": false,
+            "chunks_generated": 146,
+            "chunks_archived": 146,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 146
+          }
+        ]
+      },
+      {
+        "pypdf_version": "6.10.2",
+        "papers": 5,
+        "parents_equal": 5,
+        "chunks_generated": 265,
+        "chunks_archived": 265,
+        "papers_with_all_text_equal": 2,
+        "sample": [
+          {
+            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
+            "encrypted": false,
+            "chunks_generated": 19,
+            "chunks_archived": 19,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
+            "encrypted": false,
+            "chunks_generated": 37,
+            "chunks_archived": 37,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 22
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
+            "encrypted": true,
+            "chunks_generated": 21,
+            "chunks_archived": 21,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 18
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
+            "encrypted": false,
+            "chunks_generated": 42,
+            "chunks_archived": 42,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
+            "encrypted": false,
+            "chunks_generated": 146,
+            "chunks_archived": 146,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 135
+          }
+        ]
+      },
+      {
+        "pypdf_version": "6.10.0",
+        "papers": 5,
+        "parents_equal": 5,
+        "chunks_generated": 265,
+        "chunks_archived": 265,
+        "papers_with_all_text_equal": 2,
+        "sample": [
+          {
+            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
+            "encrypted": false,
+            "chunks_generated": 19,
+            "chunks_archived": 19,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
+            "encrypted": false,
+            "chunks_generated": 37,
+            "chunks_archived": 37,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 22
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
+            "encrypted": true,
+            "chunks_generated": 21,
+            "chunks_archived": 21,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 18
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
+            "encrypted": false,
+            "chunks_generated": 42,
+            "chunks_archived": 42,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
+            "encrypted": false,
+            "chunks_generated": 146,
+            "chunks_archived": 146,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 135
+          }
+        ]
+      },
+      {
+        "pypdf_version": "5.9.0",
+        "papers": 5,
+        "parents_equal": 5,
+        "chunks_generated": 265,
+        "chunks_archived": 265,
+        "papers_with_all_text_equal": 3,
+        "sample": [
+          {
+            "source_file": "kg/papers-full/hcc_papers/11-Demory.pdf",
+            "encrypted": false,
+            "chunks_generated": 19,
+            "chunks_archived": 19,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/7134-7147.pdf",
+            "encrypted": false,
+            "chunks_generated": 37,
+            "chunks_archived": 37,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 9
+          },
+          {
+            "source_file": "kg/papers-full/hcc_papers/65_5733-25.pdf",
+            "encrypted": true,
+            "chunks_generated": 21,
+            "chunks_archived": 21,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": false,
+            "different_text_rows": 20
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/nihms584775.pdf",
+            "encrypted": false,
+            "chunks_generated": 42,
+            "chunks_archived": 42,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          },
+          {
+            "source_file": "kg/papers-full/crc_papers/s41571-019-0241-1.pdf",
+            "encrypted": false,
+            "chunks_generated": 146,
+            "chunks_archived": 146,
+            "parent_text_equal": true,
+            "all_chunk_text_equal": true,
+            "different_text_rows": 0
+          }
+        ]
+      }
+    ],
+    "conclusion": "Historical parser version is unrecorded; five PDFs yielded 265 chunks with the tested versions, but rebuilt chunk text was not byte-identical to the archive.",
+    "parent_text_scope": "Parent text contains file metadata only; matching it is not evidence of matching extracted body text."
+  }
+}

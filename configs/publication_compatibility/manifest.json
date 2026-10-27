@@ -1,0 +1,78 @@
+{
+  "format_version": 1,
+  "purpose": "Restore the published multi_cancer JSONL row order without storing retrieval text or numerical source observations.",
+  "keyset_sha256_encoding": "SHA256 of sorted UTF-8 keys, each followed by LF; document key is doc_id; edge key is compact JSON [source_doc_id,target_doc_id,relation].",
+  "permutation_encoding": "gzip-compressed little-endian uint32 indices into lexically sorted unique keys, in publication row order",
+  "files": {
+    "raw_observation_view_docs.jsonl": {
+      "count": 18251,
+      "key_type": "doc_id",
+      "keyset_sha256": "dec447c17d68a259340d12bbae37e877e05844c5aaf5c1490e8ded47269fb98a",
+      "publication_file_sha256": "11a2ecb9959d50e05f71a989d359123e64ceeb28a02419fd108f9d97c8b1f573",
+      "permutation_file": "raw_observation_view_docs.jsonl.order.u32.gz",
+      "permutation_sha256": "9085f590fd46b2f6ccb15554a69f39a24e5aefcff62e7f08ecf13c67ddd216dc",
+      "gzip_sha256": "0dc583848a12e7f332d4daa8479c6da1ea61f965bf2e713cfda22e50127c9d1d",
+      "gzip_bytes": 25836
+    },
+    "semantic_kg_docs.jsonl": {
+      "count": 51980,
+      "key_type": "doc_id",
+      "keyset_sha256": "460db0123058bede079893650ce26a796e6a72202ba8934c8600df0c13949c31",
+      "publication_file_sha256": "d1cbe6d19db6ccc9fb5ae2a69b402ec5a10ed6e3300dee14bb986629cbf4d850",
+      "permutation_file": "semantic_kg_docs.jsonl.order.u32.gz",
+      "permutation_sha256": "8f1553a624508c93484b1e8f9ec559c52244cd28cf67334e9ac2c114ffea0881",
+      "gzip_sha256": "694e45f386e9f22766fe8324fdff9e024b11dd9927b62fa58aaf569aa86f3f58",
+      "gzip_bytes": 139798
+    },
+    "evidence_graph_complete_docs.jsonl": {
+      "count": 351783,
+      "key_type": "doc_id",
+      "keyset_sha256": "21b8e1babb30e0e09d48d6ee7bf14d9ada1025855e7fae9f14301150d75e1793",
+      "publication_file_sha256": "275d23664fd00c7b99dd1b1a4bc90ed0bb6c7c0791674c785f75b8343e68537c",
+      "permutation_file": "evidence_graph_complete_docs.jsonl.order.u32.gz",
+      "permutation_sha256": "0f1032e61b4adf07e57e168e498c6c2d03b669e9e839c5de2e51eed867ded4a6",
+      "gzip_sha256": "fb03809a297e4c43253910484345ba64ebd71e6a10796b80c5c8f375b2ea5a9d",
+      "gzip_bytes": 1024829
+    },
+    "evidence_graph_complete_edges.jsonl": {
+      "count": 1943076,
+      "key_type": "edge_triple_json",
+      "keyset_sha256": "68ca006ef2e18f1ef206dfdbfde636ab836050c4bee7f1cf4c840da3a649d882",
+      "publication_file_sha256": "06231a8fb45dce10a5a797e10cc2feeea9b13c23d9292361174412227c4b88bc",
+      "permutation_file": "evidence_graph_complete_edges.jsonl.order.u32.gz",
+      "permutation_sha256": "4d0d88eaf22f0722d9b687a746b8a05b5a0c0c99bfe2de3a199665085755b86a",
+      "gzip_sha256": "bbb95f9ea3bb7d290c94bd89c0fab150965839fe24808ee14b1191021dcb3bea",
+      "gzip_bytes": 3014081
+    }
+  },
+  "observation_lineage": {
+    "file": "observation_lineage.json.gz",
+    "source_count": 105190,
+    "edge_count": 114685,
+    "uncompressed_sha256": "97703b787376005c0d79b9126567f5400046a14be6166921895420b42af955ca",
+    "gzip_sha256": "313197467b3f4c2d5efc1a3c2d87d6eecfb532b74167484b45f59e9e9ae1da52",
+    "gzip_bytes": 1511313
+  },
+  "retrieval_runtime": {
+    "file": "retrieval_runtime.json.gz",
+    "count": 256101,
+    "uncompressed_sha256": "838e297e8580b37d9e79c4b6cbb45b5193fe2195342d035a8ee0f52ef249e70f",
+    "gzip_sha256": "be56ac82bc658b90018ca2f9dd2c60cc09e578cd2d059bea4c6b0b7c3b6ffb71",
+    "gzip_bytes": 15261871,
+    "scope": "All original EG retrieval rows with either supported timestamp path; native graph build metadata remains current.",
+    "paths": [
+      "metadata.raw_node.created_at",
+      "metadata.raw_node.provenance.extracted_at"
+    ],
+    "restore_guard": "Whole canonical row fingerprint matches after normalizing only own runtime timestamp paths and corresponding text occurrences.",
+    "path_counts": {
+      "extracted_at": 254787,
+      "text_occurrences": 254787,
+      "created_at": 171786
+    },
+    "node_type_counts": {
+      "observation": 84315,
+      "evidence": 171786
+    }
+  }
+}
